@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-100-ged45a57
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-May/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20v1.9.3-100-ged45a57&In-Reply-To=%3C20110520222007.996CC4813E2%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000132.html">
+   <LINK REL="Next"  HREF="000134.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-100-ged45a57</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20v1.9.3-100-ged45a57&In-Reply-To=%3C20110520222007.996CC4813E2%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-100-ged45a57">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Sat May 21 00:20:07 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000132.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/boots,	updated. v1.9.3-81-g6ff04bc
+</A></li>
+        <LI>Next message: <A HREF="000134.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-102-g59534ee
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#133">[ date ]</a>
+              <a href="thread.html#133">[ thread ]</a>
+              <a href="subject.html#133">[ subject ]</a>
+              <a href="author.html#133">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, feature/vegetation has been updated
+       via  ed45a5703f66ed9474210346d9462396999af06d (commit)
+       via  f55b7e39a836359b6e738a708ddb8490d442937c (commit)
+       via  85338bdbcac3090dfb2459bed297e1ca94330274 (commit)
+       via  e3e34257aa5d2f53b59394f7f0d1640b6bcb8ac8 (commit)
+       via  facbc7f9dd743542c5dc2697aa019e1f8730ae9a (commit)
+       via  8614df72abd17ecc57115703e306ba8f39bd1706 (commit)
+       via  7b3a32e9c3a42b25c2c4ea2c668356cb81638f29 (commit)
+       via  bcaa7ca86e78963b2a092beb5085e96779f59311 (commit)
+      from  b508fcc4a64d65ff8ebeff7313f10b950dcb3dd0 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit ed45a5703f66ed9474210346d9462396999af06d
+Merge: f55b7e3 85338bd
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Sat May 21 00:19:33 2011 +0200
+
+    Merge <A HREF="git://git.berlios.de/elc">git://git.berlios.de/elc</A> into feature/vegetation
+
+commit f55b7e39a836359b6e738a708ddb8490d442937c
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Sat May 21 00:19:17 2011 +0200
+
+     * Improved support of triangle strips/fans
+
+commit 8614df72abd17ecc57115703e306ba8f39bd1706
+Merge: b508fcc 7b3a32e
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Fri May 20 09:11:14 2011 +0200
+
+    Merge <A HREF="git://git.berlios.de/elc">git://git.berlios.de/elc</A> into feature/vegetation
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ Makefile.linux                              |    2 +-
+ Makefile.win                                |    2 +-
+ counters.c                                  |    9 +-
+ engine/abstractmesh.cpp                     |    3 +-
+ engine/abstractmeshdatasource.hpp           |   12 +-
+ engine/instancer.cpp                        |    6 +-
+ engine/logging.cpp                          |    4 +-
+ engine/meshdatatool.cpp                     |  391 ++++++++++++++++++++++-----
+ engine/meshdatatool.hpp                     |   38 ++-
+ engine/prerequisites.hpp                    |    3 +
+ engine/primitiveutil.cpp                    |   82 +------
+ engine/primitiveutil.hpp                    |   26 +--
+ engine/submesh.hpp                          |   16 --
+ engine/triangles.cpp                        |  120 ++++++++
+ engine/{primitiveutil.hpp =&gt; triangles.hpp} |   62 +++--
+ hud.c                                       |    5 +-
+ io/elfilewrapper.c                          |    4 +
+ manufacture.c                               |    4 -
+ sound.c                                     |    3 +
+ spells.c                                    |   47 +++-
+ text_aliases.c                              |   56 ++--
+ textures.c                                  |    4 +-
+ update.c                                    |   19 +-
+ 23 files changed, 631 insertions(+), 287 deletions(-)
+ create mode 100644 engine/triangles.cpp
+ copy engine/{primitiveutil.hpp =&gt; triangles.hpp} (50%)
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000132.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/boots,	updated. v1.9.3-81-g6ff04bc
+</A></li>
+	<LI>Next message: <A HREF="000134.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-102-g59534ee
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#133">[ date ]</a>
+              <a href="thread.html#133">[ thread ]</a>
+              <a href="subject.html#133">[ subject ]</a>
+              <a href="author.html#133">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

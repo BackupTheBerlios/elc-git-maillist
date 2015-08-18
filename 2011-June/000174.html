@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-170-gfbc1fe8
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-June/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20v1.9.3-170-gfbc1fe8&In-Reply-To=%3C20110610090434.6B33048125A%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000173.html">
+   <LINK REL="Next"  HREF="000175.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-170-gfbc1fe8</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20v1.9.3-170-gfbc1fe8&In-Reply-To=%3C20110610090434.6B33048125A%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-170-gfbc1fe8">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Fri Jun 10 11:04:34 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000173.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. v1.9.3-123-g8c4d15b
+</A></li>
+        <LI>Next message: <A HREF="000175.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. v1.9.3-124-g3f05f9d
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, feature/vegetation has been updated
+       via  fbc1fe8b713fee9f5502fa718681ce73ad0ad2a1 (commit)
+       via  dfd4212726a21d646312e65efda1f818e6035728 (commit)
+       via  b9947c2b33e31073ab23b8f600c0cbdd54421586 (commit)
+       via  07981213e2c9053558c31a684f400256c3c0b198 (commit)
+       via  2c6086257698447030ab648bda5223ddcaad798c (commit)
+       via  6b93e3a3859fc1a1494bdd37f69737cda38df0b0 (commit)
+      from  86c17064f1360e7dc1560d6e19edbdb92f52d417 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit fbc1fe8b713fee9f5502fa718681ce73ad0ad2a1
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Fri Jun 10 11:04:11 2011 +0200
+
+     * Fixed rendering
+
+commit dfd4212726a21d646312e65efda1f818e6035728
+Merge: 86c1706 b9947c2
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Tue Jun 7 12:00:15 2011 +0200
+
+    Merge <A HREF="git://git.berlios.de/elc">git://git.berlios.de/elc</A> into feature/vegetation
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ Makefile.linux              |    1 +
+ Makefile.win                |    3 +-
+ client_serv.h               |    2 +
+ engine.cpp                  |   71 ++++++++++++++-----
+ engine/boundingbox.cpp      |   22 ++++++
+ engine/boundingbox.hpp      |    9 ++-
+ engine/instancebuilder.cpp  |   27 +++++---
+ engine/instancingdata.hpp   |    1 -
+ engine/loader/e3dloader.cpp |   26 ++++++-
+ engine/object.cpp           |    3 +-
+ engine/objectdata.hpp       |    9 ++-
+ engine/reader.cpp           |    6 +-
+ engine/scene.cpp            |  158 ++++++++++++++++++++++++++++++++++---------
+ gamewin.c                   |    2 +-
+ io/map_io.c                 |   30 +++++----
+ multiplayer.c               |    2 +-
+ pkgfiles/eternallands       |   58 ++++++++--------
+ stats.c                     |   21 ++++++-
+ stats.h                     |    4 +-
+ translate.c                 |    1 +
+ 20 files changed, 336 insertions(+), 120 deletions(-)
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000173.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. v1.9.3-123-g8c4d15b
+</A></li>
+	<LI>Next message: <A HREF="000175.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. v1.9.3-124-g3f05f9d
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

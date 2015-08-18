@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 164a435ca96b9830dc194dc318636b2222559ab5
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-June/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20164a435ca96b9830dc194dc318636b2222559ab5&In-Reply-To=%3C20110623012955.8A9D04812E0%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000192.html">
+   <LINK REL="Next"  HREF="000194.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 164a435ca96b9830dc194dc318636b2222559ab5</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20164a435ca96b9830dc194dc318636b2222559ab5&In-Reply-To=%3C20110623012955.8A9D04812E0%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 164a435ca96b9830dc194dc318636b2222559ab5">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Thu Jun 23 03:29:54 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000192.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 248e2a0fc99781981f66d6f6388fba60c6ec6486
+</A></li>
+        <LI>Next message: <A HREF="000194.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 4614701e29127853d26baab0e8d4d12b371062dd
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#193">[ date ]</a>
+              <a href="thread.html#193">[ thread ]</a>
+              <a href="subject.html#193">[ subject ]</a>
+              <a href="author.html#193">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, feature/vegetation has been updated
+       via  164a435ca96b9830dc194dc318636b2222559ab5 (commit)
+      from  248e2a0fc99781981f66d6f6388fba60c6ec6486 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit 164a435ca96b9830dc194dc318636b2222559ab5
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Thu Jun 23 03:29:49 2011 +0200
+
+     * Added new texture system
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ Makefile.linux                       |    5 +-
+ Makefile.win                         |    4 +-
+ engine.cpp                           |    3 +-
+ engine/codec/codec.cpp               |   27 -
+ engine/codec/codec.hpp               |  112 ---
+ engine/codec/dds.cpp                 |  298 +++++++
+ engine/codec/dds.hpp                 |  199 +++++
+ engine/codec/ddsimage.cpp            | 1441 ++++++++++++++++++++++++++++++++++
+ engine/codec/ddsimage.hpp            |   42 +
+ engine/codec/jpegimage.cpp           |  229 ++++++
+ engine/codec/jpegimage.hpp           |   35 +
+ engine/codec/pngimage.cpp            |  269 +++++++
+ engine/codec/pngimage.hpp            |   36 +
+ engine/file.cpp                      |   12 +
+ engine/file.hpp                      |    2 +
+ engine/material.cpp                  |   96 ++-
+ engine/material.hpp                  |   25 +-
+ engine/meshcache.cpp                 |    7 +-
+ engine/meshcache.hpp                 |    6 +-
+ engine/meshdatacache.cpp             |   10 +-
+ engine/meshdatacache.hpp             |    4 +-
+ engine/prerequisites.hpp             |   12 +-
+ engine/reader.cpp                    |  108 +++
+ engine/reader.hpp                    |   10 +-
+ engine/sceneresources.cpp            |   29 +-
+ engine/sceneresources.hpp            |    2 +
+ engine/texture.cpp                   |   55 +-
+ engine/texture.hpp                   |   18 +-
+ engine/texturecache.cpp              |   90 +++
+ engine/{lua.hpp =&gt; texturecache.hpp} |   32 +-
+ engine/textureformatutil.hpp         |    8 +
+ 31 files changed, 2969 insertions(+), 257 deletions(-)
+ delete mode 100755 engine/codec/codec.cpp
+ delete mode 100755 engine/codec/codec.hpp
+ create mode 100755 engine/codec/dds.cpp
+ create mode 100755 engine/codec/dds.hpp
+ create mode 100755 engine/codec/ddsimage.cpp
+ create mode 100755 engine/codec/ddsimage.hpp
+ create mode 100755 engine/codec/jpegimage.cpp
+ create mode 100755 engine/codec/jpegimage.hpp
+ create mode 100755 engine/codec/pngimage.cpp
+ create mode 100755 engine/codec/pngimage.hpp
+ create mode 100755 engine/texturecache.cpp
+ copy engine/{lua.hpp =&gt; texturecache.hpp} (50%)
+ mode change 100644 =&gt; 100755
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000192.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 248e2a0fc99781981f66d6f6388fba60c6ec6486
+</A></li>
+	<LI>Next message: <A HREF="000194.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 4614701e29127853d26baab0e8d4d12b371062dd
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#193">[ date ]</a>
+              <a href="thread.html#193">[ thread ]</a>
+              <a href="subject.html#193">[ subject ]</a>
+              <a href="author.html#193">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, master,	updated. e913bc69d63f67d4ad918c36b5e752fc9c540045
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-April/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%20e913bc69d63f67d4ad918c36b5e752fc9c540045&In-Reply-To=%3C20110413164024.3038F481342%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000013.html">
+   <LINK REL="Next"  HREF="000015.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. e913bc69d63f67d4ad918c36b5e752fc9c540045</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%20e913bc69d63f67d4ad918c36b5e752fc9c540045&In-Reply-To=%3C20110413164024.3038F481342%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. e913bc69d63f67d4ad918c36b5e752fc9c540045">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Wed Apr 13 18:40:23 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000013.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. e8cf0bc0163312afa124a610934075fafa73fe50
+</A></li>
+        <LI>Next message: <A HREF="000015.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. ea0545c26915a6282fb0ab0f3361440905a04e1f
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14">[ date ]</a>
+              <a href="thread.html#14">[ thread ]</a>
+              <a href="subject.html#14">[ subject ]</a>
+              <a href="author.html#14">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, master has been updated
+       via  e913bc69d63f67d4ad918c36b5e752fc9c540045 (commit)
+      from  e8cf0bc0163312afa124a610934075fafa73fe50 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit e913bc69d63f67d4ad918c36b5e752fc9c540045
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Wed Apr 13 18:39:50 2011 +0200
+
+    Added support for xz file format and lzma (de)compression
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ Makefile.linux     |   12 +-
+ Makefile.win       |    8 +-
+ init.c             |    2 +
+ io/elfilewrapper.c |   80 ++-
+ io/fileutil.c      |  127 +++
+ io/fileutil.h      |   55 ++
+ io/ziputil.c       |   82 +--
+ io/ziputil.h       |    2 +-
+ new_update.c       |  215 ++++--
+ xz/7zCrc.c         |   74 ++
+ xz/7zCrc.h         |   25 +
+ xz/7zCrcOpt.c      |   34 +
+ xz/Alloc.c         |  127 +++
+ xz/Alloc.h         |   38 +
+ xz/Bra.c           |  133 +++
+ xz/Bra.h           |   68 ++
+ xz/Bra86.c         |   85 ++
+ xz/BraIA64.c       |   67 ++
+ xz/CpuArch.c       |  168 ++++
+ xz/CpuArch.h       |  155 ++++
+ xz/Delta.c         |   62 ++
+ xz/Delta.h         |   23 +
+ xz/LzFind.c        |  761 ++++++++++++++++++
+ xz/LzFind.h        |  115 +++
+ xz/LzHash.h        |   54 ++
+ xz/Lzma2Dec.c      |  356 ++++++++
+ xz/Lzma2Dec.h      |   84 ++
+ xz/Lzma2Enc.c      |  477 +++++++++++
+ xz/Lzma2Enc.h      |   66 ++
+ xz/LzmaDec.c       |  999 +++++++++++++++++++++++
+ xz/LzmaDec.h       |  231 ++++++
+ xz/LzmaEnc.c       | 2268 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ xz/LzmaEnc.h       |   80 ++
+ xz/RotateDefs.h    |   20 +
+ xz/Sha256.c        |  204 +++++
+ xz/Sha256.h        |   26 +
+ xz/Types.h         |  254 ++++++
+ xz/Xz.c            |   88 ++
+ xz/Xz.h            |  252 ++++++
+ xz/XzCrc64.c       |   33 +
+ xz/XzCrc64.h       |   26 +
+ xz/XzDec.c         |  875 ++++++++++++++++++++
+ xz/XzEnc.c         |  497 ++++++++++++
+ xz/XzEnc.h         |   25 +
+ 44 files changed, 9273 insertions(+), 160 deletions(-)
+ create mode 100644 io/fileutil.c
+ create mode 100644 io/fileutil.h
+ create mode 100755 xz/7zCrc.c
+ create mode 100755 xz/7zCrc.h
+ create mode 100755 xz/7zCrcOpt.c
+ create mode 100755 xz/Alloc.c
+ create mode 100755 xz/Alloc.h
+ create mode 100755 xz/Bra.c
+ create mode 100755 xz/Bra.h
+ create mode 100755 xz/Bra86.c
+ create mode 100755 xz/BraIA64.c
+ create mode 100755 xz/CpuArch.c
+ create mode 100755 xz/CpuArch.h
+ create mode 100755 xz/Delta.c
+ create mode 100755 xz/Delta.h
+ create mode 100755 xz/LzFind.c
+ create mode 100755 xz/LzFind.h
+ create mode 100755 xz/LzHash.h
+ create mode 100755 xz/Lzma2Dec.c
+ create mode 100755 xz/Lzma2Dec.h
+ create mode 100755 xz/Lzma2Enc.c
+ create mode 100755 xz/Lzma2Enc.h
+ create mode 100755 xz/LzmaDec.c
+ create mode 100755 xz/LzmaDec.h
+ create mode 100755 xz/LzmaEnc.c
+ create mode 100755 xz/LzmaEnc.h
+ create mode 100755 xz/RotateDefs.h
+ create mode 100755 xz/Sha256.c
+ create mode 100755 xz/Sha256.h
+ create mode 100755 xz/Types.h
+ create mode 100755 xz/Xz.c
+ create mode 100755 xz/Xz.h
+ create mode 100755 xz/XzCrc64.c
+ create mode 100755 xz/XzCrc64.h
+ create mode 100755 xz/XzDec.c
+ create mode 100755 xz/XzEnc.c
+ create mode 100755 xz/XzEnc.h
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000013.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. e8cf0bc0163312afa124a610934075fafa73fe50
+</A></li>
+	<LI>Next message: <A HREF="000015.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. ea0545c26915a6282fb0ab0f3361440905a04e1f
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14">[ date ]</a>
+              <a href="thread.html#14">[ thread ]</a>
+              <a href="subject.html#14">[ subject ]</a>
+              <a href="author.html#14">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

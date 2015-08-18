@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 9798130f9b6bf8394095c319eeaaafd881c0ca0b
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-December/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%209798130f9b6bf8394095c319eeaaafd881c0ca0b&In-Reply-To=%3C20111225075057.BF4FA480F21%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000326.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 9798130f9b6bf8394095c319eeaaafd881c0ca0b</H1>
+    <B>pjbroad at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%209798130f9b6bf8394095c319eeaaafd881c0ca0b&In-Reply-To=%3C20111225075057.BF4FA480F21%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 9798130f9b6bf8394095c319eeaaafd881c0ca0b">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Sun Dec 25 08:50:57 CET 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000326.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. b4d72943f06df087f36ec10a33a1eb3524067f45
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#327">[ date ]</a>
+              <a href="thread.html#327">[ thread ]</a>
+              <a href="subject.html#327">[ subject ]</a>
+              <a href="author.html#327">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, master has been updated
+       via  9798130f9b6bf8394095c319eeaaafd881c0ca0b (commit)
+       via  90478fda287226d20ec4de113059878dde0ff295 (commit)
+       via  6433211b2de314f8bb17212e0c55ed4dd8743c78 (commit)
+       via  9566fba31784447e79c0516602c522b5c8616075 (commit)
+       via  9692562118d5ab26b188c78e6d220d9caa28a1ea (commit)
+      from  b4d72943f06df087f36ec10a33a1eb3524067f45 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit 9798130f9b6bf8394095c319eeaaafd881c0ca0b
+Merge: b4d7294 90478fd
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sun Dec 25 07:50:55 2011 +0000
+
+    Merge branch 'master' of <A HREF="git://github.com/raduprv/Eternal-Lands">git://github.com/raduprv/Eternal-Lands</A>
+
+commit 90478fda287226d20ec4de113059878dde0ff295
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Dec 24 18:41:24 2011 +0000
+
+    Add new #keypress command - can be used by user menu to reproduce #K_.. defined key presses.
+
+commit 6433211b2de314f8bb17212e0c55ed4dd8743c78
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Dec 24 18:39:31 2011 +0000
+
+    Added previosuly missing keys to list
+
+commit 9566fba31784447e79c0516602c522b5c8616075
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Dec 24 18:27:35 2011 +0000
+
+    Put key strings and pointers to value into an array. Common usage between FASTER_STARTUP version and old.  Allows value to be looked up from string names.
+
+commit 9692562118d5ab26b188c78e6d220d9caa28a1ea
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Dec 24 14:23:30 2011 +0000
+
+    Added strerror() information to failed file open error logging.
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ 2d_objects.c       |    5 +-
+ console.c          |   19 ++-
+ cursors.c          |    5 +-
+ elconfig.c         |    7 +-
+ filter.c           |    5 +-
+ ignore.c           |    5 +-
+ init.c             |   13 +-
+ interface.c        |    3 +-
+ io/elfilewrapper.c |    5 +-
+ keys.c             |  452 +++++++++++++++-------------------------------------
+ keys.h             |    8 +
+ manufacture.c      |   10 +-
+ map.c              |    7 +-
+ mines.c            |    4 +-
+ misc.c             |    5 +-
+ particles.c        |    5 +-
+ spells.c           |    9 +-
+ text_aliases.c     |    9 +-
+ translate.c        |    2 +
+ translate.h        |    1 +
+ update.c           |    9 +-
+ 21 files changed, 219 insertions(+), 369 deletions(-)
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000326.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. b4d72943f06df087f36ec10a33a1eb3524067f45
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#327">[ date ]</a>
+              <a href="thread.html#327">[ thread ]</a>
+              <a href="subject.html#327">[ subject ]</a>
+              <a href="author.html#327">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

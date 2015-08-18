@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, master,	updated. a0bf84ec3d56b52f981f923b442d29ca03636530
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2013-February/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%20a0bf84ec3d56b52f981f923b442d29ca03636530&In-Reply-To=%3C20130217042927.21E2D55B0C%40scm.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000405.html">
+   <LINK REL="Next"  HREF="000407.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. a0bf84ec3d56b52f981f923b442d29ca03636530</H1>
+    <B>pjbroad at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%20a0bf84ec3d56b52f981f923b442d29ca03636530&In-Reply-To=%3C20130217042927.21E2D55B0C%40scm.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. a0bf84ec3d56b52f981f923b442d29ca03636530">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Sun Feb 17 05:29:26 CET 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000405.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 134ae90e453dd1786b203182233de23ca0628068
+</A></li>
+        <LI>Next message: <A HREF="000407.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 8f7f2262daecab001d77bd644de049d4f6ae7bd5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#406">[ date ]</a>
+              <a href="thread.html#406">[ thread ]</a>
+              <a href="subject.html#406">[ subject ]</a>
+              <a href="author.html#406">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, master has been updated
+       via  a0bf84ec3d56b52f981f923b442d29ca03636530 (commit)
+       via  31a8f2f52b9e2172a52c7bc72aa0e0606fce5067 (commit)
+       via  eae83c8105ed1cade1076e9990d58fea9cf0815f (commit)
+       via  4b61023e4a9a1d5da7f83da36f049d39b3983c59 (commit)
+      from  134ae90e453dd1786b203182233de23ca0628068 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit a0bf84ec3d56b52f981f923b442d29ca03636530
+Merge: 134ae90 31a8f2f
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">pjbroad at twinmoons.org.uk</A>&gt;
+Date:   Sun Feb 17 04:29:23 2013 +0000
+
+    Merge branch 'master' of <A HREF="git://github.com/raduprv/Eternal-Lands">git://github.com/raduprv/Eternal-Lands</A>
+
+commit 31a8f2f52b9e2172a52c7bc72aa0e0606fce5067
+Author: Mario Linke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">Mario.Linke at FH-Koeln.DE</A>&gt;
+Date:   Sat Feb 16 23:14:50 2013 +0100
+
+    Fix a few more small memory leaks
+
+commit eae83c8105ed1cade1076e9990d58fea9cf0815f
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">pjbroad at twinmoons.org.uk</A>&gt;
+Date:   Sat Feb 16 17:18:54 2013 +0000
+
+    Forum #58151: Fixed spells reagent confusion when images are not unique.  Needs to have #item_uid enabled and new spells.xml file with the uids included.
+
+commit 4b61023e4a9a1d5da7f83da36f049d39b3983c59
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">pjbroad at twinmoons.org.uk</A>&gt;
+Date:   Sat Feb 16 17:15:42 2013 +0000
+
+    Trade log and Item Info: Separate out help infomation and load statuc check.  Provide external functions to check if info available and show help.
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ chat.c        |   6 +
+ item_info.cpp |  43 ++--
+ item_info.h   |  18 ++
+ spells.c      |  31 ++-
+ spells.xml    | 690 +++++++++++++++++++++++++++++-----------------------------
+ trade_log.cpp |   6 +-
+ translate.c   |   1 +
+ 7 files changed, 428 insertions(+), 367 deletions(-)
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000405.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 134ae90e453dd1786b203182233de23ca0628068
+</A></li>
+	<LI>Next message: <A HREF="000407.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 8f7f2262daecab001d77bd644de049d4f6ae7bd5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#406">[ date ]</a>
+              <a href="thread.html#406">[ thread ]</a>
+              <a href="subject.html#406">[ subject ]</a>
+              <a href="author.html#406">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

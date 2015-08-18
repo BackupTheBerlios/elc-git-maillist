@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. fd494746c27027f643b5d0cc15219618cee49f03
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-June/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20fd494746c27027f643b5d0cc15219618cee49f03&In-Reply-To=%3C20110620112411.0B94F4805E0%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000186.html">
+   <LINK REL="Next"  HREF="000188.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. fd494746c27027f643b5d0cc15219618cee49f03</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20fd494746c27027f643b5d0cc15219618cee49f03&In-Reply-To=%3C20110620112411.0B94F4805E0%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. fd494746c27027f643b5d0cc15219618cee49f03">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Mon Jun 20 13:24:09 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000186.html">[Elc-git] [Git]Project elc at BerliOS tag, v1.9.2,	created. 70a631f5fea431cfb54eab9309eec627a02f9d70
+</A></li>
+        <LI>Next message: <A HREF="000188.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. dd6ce179e917247d5e6a4d56c5380fd60365b81d
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#187">[ date ]</a>
+              <a href="thread.html#187">[ thread ]</a>
+              <a href="subject.html#187">[ subject ]</a>
+              <a href="author.html#187">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, feature/vegetation has been updated
+       via  fd494746c27027f643b5d0cc15219618cee49f03 (commit)
+      from  fbc1fe8b713fee9f5502fa718681ce73ad0ad2a1 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit fd494746c27027f643b5d0cc15219618cee49f03
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Thu Jun 16 09:59:55 2011 +0200
+
+     * Initial add of lua files and effect format
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ Makefile.linux                                     |   19 +-
+ Makefile.win                                       |   15 +-
+ engine.cpp                                         |   15 +-
+ .../{abstractwritememorybuffer.cpp =&gt; effect.cpp}  |   11 +-
+ engine/effect.hpp                                  |   50 +
+ engine/effectcache.cpp                             |   96 ++
+ engine/effectcache.hpp                             |   57 +
+ engine/file.cpp                                    |   19 +-
+ engine/file.hpp                                    |    5 +-
+ engine/glsl/glslprogram.cpp                        |  391 ++++++-
+ engine/glsl/glslprogram.hpp                        |   18 +-
+ engine/instancebuilder.cpp                         |  165 +--
+ engine/instancebuilder.hpp                         |    7 +-
+ engine/instancingdata.cpp                          |   14 +
+ engine/instancingdata.hpp                          |    3 +
+ engine/loader/e2dloader.cpp                        |    2 +-
+ engine/loader/e3dloader.cpp                        |   12 +-
+ engine/lua/lapi.cpp                                | 1087 ++++++++++++++++
+ engine/lua/lapi.h                                  |   16 +
+ engine/lua/lauxlib.cpp                             |  652 ++++++++++
+ engine/lua/lauxlib.h                               |  174 +++
+ engine/lua/lbaselib.cpp                            |  653 ++++++++++
+ engine/lua/lcode.cpp                               |  839 ++++++++++++
+ engine/lua/lcode.h                                 |   76 ++
+ engine/lua/ldblib.cpp                              |  397 ++++++
+ engine/lua/ldebug.cpp                              |  638 ++++++++++
+ engine/lua/ldebug.h                                |   33 +
+ engine/lua/ldo.cpp                                 |  518 ++++++++
+ engine/lua/ldo.h                                   |   57 +
+ engine/lua/ldump.cpp                               |  164 +++
+ engine/lua/lfunc.cpp                               |  174 +++
+ engine/lua/lfunc.h                                 |   34 +
+ engine/lua/lgc.cpp                                 |  711 +++++++++++
+ engine/lua/lgc.h                                   |  110 ++
+ engine/lua/linit.cpp                               |   38 +
+ engine/lua/liolib.cpp                              |  553 ++++++++
+ engine/lua/llex.cpp                                |  461 +++++++
+ engine/lua/llex.h                                  |   81 ++
+ engine/lua/llimits.h                               |  128 ++
+ engine/lua/lmathlib.cpp                            |  263 ++++
+ engine/lua/lmem.cpp                                |   86 ++
+ engine/lua/lmem.h                                  |   49 +
+ engine/lua/loadlib.cpp                             |  666 ++++++++++
+ engine/lua/lobject.cpp                             |  214 ++++
+ engine/lua/lobject.h                               |  381 ++++++
+ engine/lua/lopcodes.cpp                            |  102 ++
+ engine/lua/lopcodes.h                              |  268 ++++
+ engine/lua/loslib.cpp                              |  243 ++++
+ engine/lua/lparser.cpp                             | 1339 ++++++++++++++++++++
+ engine/lua/lparser.h                               |   82 ++
+ engine/lua/lstate.cpp                              |  214 ++++
+ engine/lua/lstate.h                                |  169 +++
+ engine/lua/lstring.cpp                             |  111 ++
+ engine/lua/lstring.h                               |   31 +
+ engine/lua/lstrlib.cpp                             |  869 +++++++++++++
+ engine/lua/ltable.cpp                              |  588 +++++++++
+ engine/lua/ltable.h                                |   40 +
+ engine/lua/ltablib.cpp                             |  287 +++++
+ engine/lua/ltm.cpp                                 |   75 ++
+ engine/lua/ltm.h                                   |   54 +
+ engine/lua/lua.h                                   |  388 ++++++
+ engine/lua/luaconf.h                               |  763 +++++++++++
+ engine/lua/lualib.h                                |   53 +
+ engine/lua/lundump.cpp                             |  227 ++++
+ engine/lua/lundump.h                               |   36 +
+ engine/lua/lvm.cpp                                 |  763 +++++++++++
+ engine/lua/lvm.h                                   |   36 +
+ engine/lua/lzio.cpp                                |   82 ++
+ engine/lua/lzio.h                                  |   67 +
+ engine/material.cpp                                |   65 +-
+ engine/material.hpp                                |   33 +-
+ engine/materialdata.cpp                            |   62 +
+ engine/materialdata.hpp                            |   60 +-
+ engine/meshdatacache.cpp                           |   20 -
+ engine/object.cpp                                  |   64 +-
+ engine/object.hpp                                  |  210 +---
+ engine/prerequisites.hpp                           |   13 +
+ engine/reader.hpp                                  |   10 +-
+ engine/rstartreeobjectvisitor.cpp                  |   10 +-
+ engine/rstartreeobjectvisitor.hpp                  |    6 +
+ engine/scene.cpp                                   |  183 ++-
+ engine/scene.hpp                                   |    9 +
+ engine/sceneresources.cpp                          |   29 +
+ engine/sceneresources.hpp                          |    2 +
+ engine/subobject.cpp                               |   49 +
+ engine/{objectdata.hpp =&gt; subobject.hpp}           |   98 +-
+ vegetation.cpp                                     |  249 ----
+ 87 files changed, 17305 insertions(+), 906 deletions(-)
+ copy engine/{abstractwritememorybuffer.cpp =&gt; effect.cpp} (54%)
+ create mode 100644 engine/effect.hpp
+ create mode 100644 engine/effectcache.cpp
+ create mode 100644 engine/effectcache.hpp
+ create mode 100644 engine/lua/lapi.cpp
+ create mode 100644 engine/lua/lapi.h
+ create mode 100644 engine/lua/lauxlib.cpp
+ create mode 100644 engine/lua/lauxlib.h
+ create mode 100644 engine/lua/lbaselib.cpp
+ create mode 100644 engine/lua/lcode.cpp
+ create mode 100644 engine/lua/lcode.h
+ create mode 100644 engine/lua/ldblib.cpp
+ create mode 100644 engine/lua/ldebug.cpp
+ create mode 100644 engine/lua/ldebug.h
+ create mode 100644 engine/lua/ldo.cpp
+ create mode 100644 engine/lua/ldo.h
+ create mode 100644 engine/lua/ldump.cpp
+ create mode 100644 engine/lua/lfunc.cpp
+ create mode 100644 engine/lua/lfunc.h
+ create mode 100644 engine/lua/lgc.cpp
+ create mode 100644 engine/lua/lgc.h
+ create mode 100644 engine/lua/linit.cpp
+ create mode 100644 engine/lua/liolib.cpp
+ create mode 100644 engine/lua/llex.cpp
+ create mode 100644 engine/lua/llex.h
+ create mode 100644 engine/lua/llimits.h
+ create mode 100644 engine/lua/lmathlib.cpp
+ create mode 100644 engine/lua/lmem.cpp
+ create mode 100644 engine/lua/lmem.h
+ create mode 100644 engine/lua/loadlib.cpp
+ create mode 100644 engine/lua/lobject.cpp
+ create mode 100644 engine/lua/lobject.h
+ create mode 100644 engine/lua/lopcodes.cpp
+ create mode 100644 engine/lua/lopcodes.h
+ create mode 100644 engine/lua/loslib.cpp
+ create mode 100644 engine/lua/lparser.cpp
+ create mode 100644 engine/lua/lparser.h
+ create mode 100644 engine/lua/lstate.cpp
+ create mode 100644 engine/lua/lstate.h
+ create mode 100644 engine/lua/lstring.cpp
+ create mode 100644 engine/lua/lstring.h
+ create mode 100644 engine/lua/lstrlib.cpp
+ create mode 100644 engine/lua/ltable.cpp
+ create mode 100644 engine/lua/ltable.h
+ create mode 100644 engine/lua/ltablib.cpp
+ create mode 100644 engine/lua/ltm.cpp
+ create mode 100644 engine/lua/ltm.h
+ create mode 100644 engine/lua/lua.h
+ create mode 100644 engine/lua/luaconf.h
+ create mode 100644 engine/lua/lualib.h
+ create mode 100644 engine/lua/lundump.cpp
+ create mode 100644 engine/lua/lundump.h
+ create mode 100644 engine/lua/lvm.cpp
+ create mode 100644 engine/lua/lvm.h
+ create mode 100644 engine/lua/lzio.cpp
+ create mode 100644 engine/lua/lzio.h
+ create mode 100644 engine/materialdata.cpp
+ create mode 100644 engine/subobject.cpp
+ copy engine/{objectdata.hpp =&gt; subobject.hpp} (54%)
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000186.html">[Elc-git] [Git]Project elc at BerliOS tag, v1.9.2,	created. 70a631f5fea431cfb54eab9309eec627a02f9d70
+</A></li>
+	<LI>Next message: <A HREF="000188.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. dd6ce179e917247d5e6a4d56c5380fd60365b81d
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#187">[ date ]</a>
+              <a href="thread.html#187">[ thread ]</a>
+              <a href="subject.html#187">[ subject ]</a>
+              <a href="author.html#187">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

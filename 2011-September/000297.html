@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, master,	updated. f2bdd2ff02f7b134f65d36f4b5c9a35062175296
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-September/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%20f2bdd2ff02f7b134f65d36f4b5c9a35062175296&In-Reply-To=%3C20110918105453.A48D94813C9%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000296.html">
+   <LINK REL="Next"  HREF="000298.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. f2bdd2ff02f7b134f65d36f4b5c9a35062175296</H1>
+    <B>pjbroad at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%20f2bdd2ff02f7b134f65d36f4b5c9a35062175296&In-Reply-To=%3C20110918105453.A48D94813C9%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. f2bdd2ff02f7b134f65d36f4b5c9a35062175296">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Sun Sep 18 12:54:52 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000296.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 7a11ea9c9d98660d2928d08f0215466f104fad83
+</A></li>
+        <LI>Next message: <A HREF="000298.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. b86a9efac557389408c78bc948ec64cfbbaa84ea
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#297">[ date ]</a>
+              <a href="thread.html#297">[ thread ]</a>
+              <a href="subject.html#297">[ subject ]</a>
+              <a href="author.html#297">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, master has been updated
+       via  f2bdd2ff02f7b134f65d36f4b5c9a35062175296 (commit)
+       via  4231f62ed706706be5a92a17a8073e85260e806a (commit)
+       via  3fd52c11695bcee2030d310f9a93b347849b9a75 (commit)
+       via  1db508ef9230b8a437494f01cff5b49525cd067c (commit)
+      from  7a11ea9c9d98660d2928d08f0215466f104fad83 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit f2bdd2ff02f7b134f65d36f4b5c9a35062175296
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sun Sep 18 11:54:28 2011 +0100
+
+    Tidied date handling dependancies and reduced server requests.  Added date to hud clock mouse hover.  Add coords to compass mouse hover.
+
+commit 4231f62ed706706be5a92a17a8073e85260e806a
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Sep 17 18:46:33 2011 +0100
+
+    Move real_game_minutes and real_game_seconds closer to use.  Remove unneeded include of lights.h
+
+commit 3fd52c11695bcee2030d310f9a93b347849b9a75
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Sep 17 18:46:04 2011 +0100
+
+    Move real_game_minutes and real_game_seconds closer to use.  Remove unneeded include of lights.h
+
+commit 1db508ef9230b8a437494f01cff5b49525cd067c
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Sep 17 18:43:50 2011 +0100
+
+    Fix compile without CLUSTER_INSIDES
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ 3d_objects.c  |    1 +
+ console.c     |    1 -
+ hud.c         |   66 +++++++++++++++++++++++++++++++++-------------------
+ lights.c      |    4 +--
+ lights.h      |    3 --
+ mapwin.c      |    1 -
+ multiplayer.c |   71 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ multiplayer.h |   30 ++++++++++++++++++++++++
+ pm_log.c      |    1 -
+ sky.c         |    1 +
+ text.c        |   11 +++-----
+ textures.c    |    1 -
+ weather.c     |    1 -
+ widgets.c     |   25 ++++++++------------
+ widgets.h     |   15 ------------
+ 15 files changed, 160 insertions(+), 72 deletions(-)
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000296.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 7a11ea9c9d98660d2928d08f0215466f104fad83
+</A></li>
+	<LI>Next message: <A HREF="000298.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. b86a9efac557389408c78bc948ec64cfbbaa84ea
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#297">[ date ]</a>
+              <a href="thread.html#297">[ thread ]</a>
+              <a href="subject.html#297">[ subject ]</a>
+              <a href="author.html#297">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 9a6023b3524f94226a5f779c437f81b0a586eae6
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-June/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%209a6023b3524f94226a5f779c437f81b0a586eae6&In-Reply-To=%3C20110630103124.61D2B4828FD%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000204.html">
+   <LINK REL="Next"  HREF="000206.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 9a6023b3524f94226a5f779c437f81b0a586eae6</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%209a6023b3524f94226a5f779c437f81b0a586eae6&In-Reply-To=%3C20110630103124.61D2B4828FD%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. 9a6023b3524f94226a5f779c437f81b0a586eae6">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Thu Jun 30 12:31:23 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000204.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. cd32dbeba01ececfcb0f2f916a31356aac896836
+</A></li>
+        <LI>Next message: <A HREF="000206.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/opengl2,	created. 9a6023b3524f94226a5f779c437f81b0a586eae6
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#205">[ date ]</a>
+              <a href="thread.html#205">[ thread ]</a>
+              <a href="subject.html#205">[ subject ]</a>
+              <a href="author.html#205">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, feature/vegetation has been updated
+       via  9a6023b3524f94226a5f779c437f81b0a586eae6 (commit)
+       via  7665b4eb3e3a1c5e689a408c2f793633095c0cc4 (commit)
+      from  74a841c1bbf2919c8c5d4aec4a0a7b7c6af1fcd7 (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit 9a6023b3524f94226a5f779c437f81b0a586eae6
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Thu Jun 30 12:30:55 2011 +0200
+
+     * Added cmake files
+
+commit 7665b4eb3e3a1c5e689a408c2f793633095c0cc4
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Thu Jun 30 00:16:31 2011 +0200
+
+     * Actor optimizations
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ CMakeLists.txt                    |   90 ++++++++++++++++
+ actor_init.h                      |    6 +-
+ actor_scripts.c                   |    2 +-
+ actors.c                          |    8 +-
+ cmake/FindCal3d.cmake             |   30 ++++++
+ cmake/FindIconv.cmake             |   57 ++++++++++
+ engine.cpp                        |   92 +++++------------
+ engine/CMakeLists.txt             |   52 +++++++++
+ engine/actor.cpp                  |   19 ++--
+ engine/actor.hpp                  |   11 ++-
+ engine/actordatacache.cpp         |   50 +++++++--
+ engine/actordatacache.hpp         |    5 +-
+ engine/instancebuilder.cpp        |  208 ++-----------------------------------
+ engine/instancebuilder.hpp        |    9 +-
+ engine/instancingdata.cpp         |   14 +--
+ engine/instancingdata.hpp         |    2 +-
+ engine/lua/CMakeLists.txt         |   19 ++++
+ engine/prerequisites.hpp          |    8 +-
+ engine/rstartreelightvisitor.cpp  |   41 ++++----
+ engine/rstartreeobjectvisitor.cpp |   53 ++++++++++
+ engine/rstartreeobjectvisitor.hpp |    2 +
+ engine/scene.cpp                  |   53 ++++++++--
+ engine/scene.hpp                  |   11 ++-
+ engine/sceneresources.cpp         |   14 +++-
+ engine/sceneresources.hpp         |    1 +
+ new_actors.c                      |    5 +-
+ new_character.c                   |    6 +-
+ 27 files changed, 515 insertions(+), 353 deletions(-)
+ create mode 100644 CMakeLists.txt
+ create mode 100755 cmake/FindCal3d.cmake
+ create mode 100644 cmake/FindIconv.cmake
+ create mode 100644 engine/CMakeLists.txt
+ create mode 100755 engine/lua/CMakeLists.txt
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000204.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. cd32dbeba01ececfcb0f2f916a31356aac896836
+</A></li>
+	<LI>Next message: <A HREF="000206.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/opengl2,	created. 9a6023b3524f94226a5f779c437f81b0a586eae6
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#205">[ date ]</a>
+              <a href="thread.html#205">[ thread ]</a>
+              <a href="subject.html#205">[ subject ]</a>
+              <a href="author.html#205">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

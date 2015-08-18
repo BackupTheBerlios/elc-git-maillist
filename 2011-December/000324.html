@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 76ff6b11c90ef58a8b594f418711b23de083bc62
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-December/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%2076ff6b11c90ef58a8b594f418711b23de083bc62&In-Reply-To=%3C20111217074800.E72A64829D2%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000323.html">
+   <LINK REL="Next"  HREF="000325.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 76ff6b11c90ef58a8b594f418711b23de083bc62</H1>
+    <B>pjbroad at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20master%2C%0A%09updated.%2076ff6b11c90ef58a8b594f418711b23de083bc62&In-Reply-To=%3C20111217074800.E72A64829D2%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. 76ff6b11c90ef58a8b594f418711b23de083bc62">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Sat Dec 17 08:47:59 CET 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000323.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. ccaad5b58594f6d37faf606216312c9484c0c01b
+</A></li>
+        <LI>Next message: <A HREF="000325.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. fe8666123819e7130ea039538e9e956a30a281e1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#324">[ date ]</a>
+              <a href="thread.html#324">[ thread ]</a>
+              <a href="subject.html#324">[ subject ]</a>
+              <a href="author.html#324">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, master has been updated
+       via  76ff6b11c90ef58a8b594f418711b23de083bc62 (commit)
+       via  72f697d481c187d14e5dd4b8111b377984fc0b39 (commit)
+       via  c33d7d1e7456b09c6e9e671aee26e0d7b31fa6c2 (commit)
+       via  b942435f1501afc0aca67a88142faf9aa02c2b0c (commit)
+       via  5b751ed7dd12d5c8e8a20362a26b38d43ec4760f (commit)
+       via  46409f6ab482ff6b53dea297dbcb9ee4f467835e (commit)
+       via  8b5010a359c1280d1413df56381b169bf9b6d660 (commit)
+       via  c77499e2e286051e750d15839a97a3416de1e796 (commit)
+      from  ccaad5b58594f6d37faf606216312c9484c0c01b (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit 76ff6b11c90ef58a8b594f418711b23de083bc62
+Merge: 72f697d c33d7d1
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Dec 17 07:47:58 2011 +0000
+
+    Merge branch 'master' of <A HREF="git://github.com/raduprv/Eternal-Lands">git://github.com/raduprv/Eternal-Lands</A>
+
+commit 72f697d481c187d14e5dd4b8111b377984fc0b39
+Merge: ccaad5b b942435
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Sat Dec 17 07:47:54 2011 +0000
+
+    Merge branch 'feature/new_engine' of <A HREF="git://git.berlios.de/elc">git://git.berlios.de/elc</A>
+
+commit c33d7d1e7456b09c6e9e671aee26e0d7b31fa6c2
+Author: Paul Broadhead &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">paul at twinmoons.org.uk</A>&gt;
+Date:   Fri Dec 16 16:57:25 2011 +0000
+
+    Do not set use cursor for game window when set on inv/qb windows. For use_with, allow item reuse in qb and game window (like inv window) when shift+click used.
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ CMakeLists.txt                           |   59 ++
+ engine/CMakeLists.txt                    |   20 +
+ engine/boundedobject.cpp                 |   22 +
+ engine/boundedobject.hpp                 |   55 ++
+ engine/boundingbox.cpp                   |  104 ++++
+ engine/boundingbox.hpp                   |  242 +++++++++
+ engine/exceptions.hpp                    |   78 +++
+ engine/frustum.cpp                       |  175 ++++++
+ engine/frustum.hpp                       |   99 ++++
+ io/half.h =&gt; engine/new/abstractmesh.cpp |   20 +-
+ engine/new/abstractmesh.hpp              |   56 ++
+ engine/{ =&gt; new}/hardwarebuffer.cpp      |   17 +-
+ engine/{ =&gt; new}/hardwarebuffer.hpp      |   11 +-
+ engine/new/meshdata.cpp                  |  142 +++++
+ engine/new/meshdata.hpp                  |  100 ++++
+ engine/new/opengl1mesh.cpp               |   82 +++
+ engine/new/opengl1mesh.hpp               |   62 +++
+ engine/new/opengl2mesh.cpp               |   85 +++
+ engine/new/opengl2mesh.hpp               |   61 +++
+ engine/new/opengl3mesh.cpp               |   89 ++++
+ engine/new/opengl3mesh.hpp               |   72 +++
+ engine/new/vertexelement.cpp             |  415 +++++++++++++++
+ engine/new/vertexelement.hpp             |  379 +++++++++++++
+ engine/new/vertexstreamdescription.cpp   |   35 ++
+ engine/new/vertexstreamdescription.hpp   |   76 +++
+ engine/plane.cpp                         |   51 ++
+ engine/plane.hpp                         |  190 +++++++
+ engine/prerequisites.hpp                 |   88 +++
+ engine/rstartree.cpp                     |  348 ++++++++++++
+ engine/rstartree.hpp                     |  356 +++++++++++++
+ engine/rstartreenode.cpp                 |  846 ++++++++++++++++++++++++++++++
+ engine/rstartreenode.hpp                 |  512 ++++++++++++++++++
+ gamewin.c                                |    8 +-
+ hud.c                                    |    5 +-
+ items.c                                  |    7 +-
+ tests/CMakeLists.txt                     |   43 ++
+ tests/boundingboxtest.cpp                |  229 ++++++++
+ tests/planetest.cpp                      |   85 +++
+ tests/rstartreenodetest.cpp              |  476 +++++++++++++++++
+ tests/rstartreetest.cpp                  |  125 +++++
+ translate.c                              |    2 +
+ translate.h                              |    1 +
+ 42 files changed, 5902 insertions(+), 26 deletions(-)
+ create mode 100755 CMakeLists.txt
+ create mode 100755 engine/CMakeLists.txt
+ create mode 100644 engine/boundedobject.cpp
+ create mode 100644 engine/boundedobject.hpp
+ create mode 100755 engine/boundingbox.cpp
+ create mode 100755 engine/boundingbox.hpp
+ create mode 100755 engine/exceptions.hpp
+ create mode 100755 engine/frustum.cpp
+ create mode 100755 engine/frustum.hpp
+ copy io/half.h =&gt; engine/new/abstractmesh.cpp (50%)
+ create mode 100644 engine/new/abstractmesh.hpp
+ copy engine/{ =&gt; new}/hardwarebuffer.cpp (71%)
+ mode change 100644 =&gt; 100755
+ copy engine/{ =&gt; new}/hardwarebuffer.hpp (92%)
+ mode change 100644 =&gt; 100755
+ create mode 100644 engine/new/meshdata.cpp
+ create mode 100644 engine/new/meshdata.hpp
+ create mode 100644 engine/new/opengl1mesh.cpp
+ create mode 100644 engine/new/opengl1mesh.hpp
+ create mode 100644 engine/new/opengl2mesh.cpp
+ create mode 100644 engine/new/opengl2mesh.hpp
+ create mode 100644 engine/new/opengl3mesh.cpp
+ create mode 100644 engine/new/opengl3mesh.hpp
+ create mode 100755 engine/new/vertexelement.cpp
+ create mode 100755 engine/new/vertexelement.hpp
+ create mode 100644 engine/new/vertexstreamdescription.cpp
+ create mode 100644 engine/new/vertexstreamdescription.hpp
+ create mode 100644 engine/plane.cpp
+ create mode 100755 engine/plane.hpp
+ create mode 100755 engine/prerequisites.hpp
+ create mode 100755 engine/rstartree.cpp
+ create mode 100755 engine/rstartree.hpp
+ create mode 100755 engine/rstartreenode.cpp
+ create mode 100755 engine/rstartreenode.hpp
+ create mode 100644 tests/CMakeLists.txt
+ create mode 100644 tests/boundingboxtest.cpp
+ create mode 100644 tests/planetest.cpp
+ create mode 100644 tests/rstartreenodetest.cpp
+ create mode 100644 tests/rstartreetest.cpp
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000323.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. ccaad5b58594f6d37faf606216312c9484c0c01b
+</A></li>
+	<LI>Next message: <A HREF="000325.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. fe8666123819e7130ea039538e9e956a30a281e1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#324">[ date ]</a>
+              <a href="thread.html#324">[ thread ]</a>
+              <a href="subject.html#324">[ subject ]</a>
+              <a href="author.html#324">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-72-g35fc29f
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-May/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20v1.9.3-72-g35fc29f&In-Reply-To=%3C20110512092633.0420448138E%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000096.html">
+   <LINK REL="Next"  HREF="000098.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-72-g35fc29f</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/vegetation%2C%0A%09updated.%20v1.9.3-72-g35fc29f&In-Reply-To=%3C20110512092633.0420448138E%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, feature/vegetation,	updated. v1.9.3-72-g35fc29f">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Thu May 12 11:26:32 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000096.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/debug-sse,	created. v1.9.3-43-gbbce5c5
+</A></li>
+        <LI>Next message: <A HREF="000098.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. v1.9.3-42-gc720fd0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#97">[ date ]</a>
+              <a href="thread.html#97">[ thread ]</a>
+              <a href="subject.html#97">[ subject ]</a>
+              <a href="author.html#97">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, feature/vegetation has been updated
+       via  35fc29f497a919d4b6db8daea1d39fabe86322a3 (commit)
+       via  b32bc2df33b840b52a0b30602bced19e37d89702 (commit)
+       via  77df9c517a1016a0152ddb88a0c9d641ff88ab70 (commit)
+       via  f926d37d3c3b24fbbd9a1fd7cfcc1ae83575d870 (commit)
+      from  3454ec8fc895834c5b74b0ffaf3e2f4ba627dd6a (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit 35fc29f497a919d4b6db8daea1d39fabe86322a3
+Merge: b32bc2d 77df9c5
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Thu May 12 11:25:04 2011 +0200
+
+    Merge <A HREF="git://git.berlios.de/elc">git://git.berlios.de/elc</A> into feature/vegetation
+
+commit b32bc2df33b840b52a0b30602bced19e37d89702
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Thu May 12 11:24:48 2011 +0200
+
+     * Fix for bounding box transform
+     * Added missing features to glsl program
+     * Added some features to scene
+     * Minor fixes and cleanups
+
+commit f926d37d3c3b24fbbd9a1fd7cfcc1ae83575d870
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Tue May 10 23:51:11 2011 +0200
+
+     * Added visitor for rstartree and optimized bounding box
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ Makefile.linux                                     |    3 +-
+ Makefile.win                                       |    6 +-
+ dds.c                                              |    2 +-
+ dds.h                                              |    2 +-
+ ddsimage.c                                         |    9 +-
+ ddsimage.h                                         |   71 +++++----
+ engine/abstractmesh.cpp                            |    5 +
+ engine/abstractmesh.hpp                            |    5 +
+ ...datasource.cpp =&gt; abstractrstartreevisitor.cpp} |    8 +-
+ engine/abstractrstartreevisitor.hpp                |   50 ++++++
+ engine/boundingbox.cpp                             |   19 +--
+ engine/frustum.hpp                                 |    6 +-
+ engine/glsl/glslprogram.cpp                        |  164 +++++++++++---------
+ engine/prerequisites.hpp                           |    3 +
+ engine/rstartree.cpp                               |    2 +-
+ engine/rstartree.hpp                               |    2 +-
+ engine/rstartreenode.cpp                           |   18 ++-
+ engine/rstartreenode.hpp                           |    6 +-
+ ...twritememorybuffer.cpp =&gt; rstartreevisitor.cpp} |   14 ++-
+ engine/rstartreevisitor.hpp                        |   59 +++++++
+ engine/scene.cpp                                   |   78 +++++++++
+ engine/scene.hpp                                   |    1 +
+ image_loading.c                                    |   20 ++-
+ image_loading.h                                    |  144 +++++++++--------
+ memory.c                                           |   30 ++++
+ memory.h                                           |   43 +++++
+ textures.c                                         |   14 +-
+ vegetation.cpp                                     |   10 +-
+ 28 files changed, 566 insertions(+), 228 deletions(-)
+ copy engine/{abstractmeshdatasource.cpp =&gt; abstractrstartreevisitor.cpp} (62%)
+ create mode 100644 engine/abstractrstartreevisitor.hpp
+ copy engine/{abstractwritememorybuffer.cpp =&gt; rstartreevisitor.cpp} (53%)
+ create mode 100644 engine/rstartreevisitor.hpp
+ create mode 100644 memory.c
+ create mode 100644 memory.h
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000096.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/debug-sse,	created. v1.9.3-43-gbbce5c5
+</A></li>
+	<LI>Next message: <A HREF="000098.html">[Elc-git] [Git]Project elc at BerliOS branch, master,	updated. v1.9.3-42-gc720fd0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#97">[ date ]</a>
+              <a href="thread.html#97">[ thread ]</a>
+              <a href="subject.html#97">[ subject ]</a>
+              <a href="author.html#97">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>

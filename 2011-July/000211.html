@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Elc-git] [Git]Project elc at BerliOS branch, feature/opengl2,	updated. 40bc6299e7b815420605dda437ae6611b1e9033d
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/elc-git/2011-July/index.html" >
+   <LINK REL="made" HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/opengl2%2C%0A%09updated.%2040bc6299e7b815420605dda437ae6611b1e9033d&In-Reply-To=%3C20110703182528.C70F24828D6%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000212.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Elc-git] [Git]Project elc at BerliOS branch, feature/opengl2,	updated. 40bc6299e7b815420605dda437ae6611b1e9033d</H1>
+    <B>xaphier at BerliOS</B> 
+    <A HREF="mailto:elc-git%40lists.berlios.de?Subject=Re%3A%20%5BElc-git%5D%20%5BGit%5DProject%20elc%20at%20BerliOS%20branch%2C%20feature/opengl2%2C%0A%09updated.%2040bc6299e7b815420605dda437ae6611b1e9033d&In-Reply-To=%3C20110703182528.C70F24828D6%40sheep.berlios.de%3E"
+       TITLE="[Elc-git] [Git]Project elc at BerliOS branch, feature/opengl2,	updated. 40bc6299e7b815420605dda437ae6611b1e9033d">elc-git at lists.berlios.de
+       </A><BR>
+    <I>Sun Jul  3 20:25:27 CEST 2011</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000212.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/opengl2,	updated. 7edfd0bbde1e93c239270b9fc0108535b9576ea8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#211">[ date ]</a>
+              <a href="thread.html#211">[ thread ]</a>
+              <a href="subject.html#211">[ subject ]</a>
+              <a href="author.html#211">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This is an automated email from the git hooks/post-receive script. It was
+generated because a ref change was pushed to the repository containing
+the project &quot;Project elc at BerliOS&quot;.
+
+The branch, feature/opengl2 has been updated
+       via  40bc6299e7b815420605dda437ae6611b1e9033d (commit)
+      from  40dd8b3b3e995c4e0c0e41cb1d393ca699cea7ad (commit)
+
+Those revisions listed above that are new to this repository have
+not appeared on any other notification email; so we list those
+revisions in full, below.
+
+- Log -----------------------------------------------------------------
+commit 40bc6299e7b815420605dda437ae6611b1e9033d
+Author: xaphier &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/elc-git">el.3d.source at googlemail.com</A>&gt;
+Date:   Sun Jul 3 20:25:03 2011 +0200
+
+     * Added GLEW and actor texture support
+
+-----------------------------------------------------------------------
+
+Summary of changes:
+ CMakeLists.txt                 |    3 +
+ cmake/FindGLEW.cmake           |   44 ++++
+ elloggingwrapper.cpp           |   15 +-
+ elloggingwrapper.h             |   20 +-
+ engine.cpp                     |  102 ++++++--
+ engine.h                       |    3 +
+ engine/CMakeLists.txt          |    2 +
+ engine/actor.cpp               |   29 ++
+ engine/actor.hpp               |    1 +
+ engine/actordatacache.cpp      |    4 +-
+ engine/actortexturebuilder.cpp |  558 +++++++++++++++++++++++++++++-----------
+ engine/actortexturebuilder.hpp |    8 +-
+ engine/codec/codecmanager.cpp  |   24 ++-
+ engine/codec/ddsimage.cpp      |    6 +-
+ engine/effect.cpp              |    5 +-
+ engine/effectcache.cpp         |    3 +-
+ engine/file.cpp                |    9 +-
+ engine/glsl/glslprogram.cpp    |   91 ++++----
+ engine/hardwarebuffer.cpp      |   17 +-
+ engine/image.cpp               |   43 +++-
+ engine/image.hpp               |  128 ++++++++--
+ engine/instancebuilder.cpp     |   25 +--
+ engine/logging.hpp             |    3 +-
+ engine/memorybuffer.cpp        |   18 +-
+ engine/memorybuffer.hpp        |    7 +-
+ engine/meshdatatool.cpp        |    7 +-
+ engine/opengl2/opengl2mesh.cpp |    7 +-
+ engine/prerequisites.hpp       |    4 +-
+ engine/scene.cpp               |   15 +-
+ engine/sceneresources.cpp      |    2 +-
+ engine/subobject.hpp           |    6 +
+ engine/texture.cpp             |   35 ++--
+ engine/texturecache.cpp        |    8 +-
+ engine/textureformatutil.cpp   |   67 ++++--
+ engine/textureformatutil.hpp   |   16 +-
+ engine/triangles.cpp           |    6 +-
+ engine/vertexelement.cpp       |    9 +-
+ eye_candy/eye_candy.h          |   15 +-
+ eye_candy_wrapper.h            |    8 +-
+ gl_init.c                      |    4 +-
+ new_actors.c                   |    3 +
+ new_character.c                |   18 ++-
+ platform.h                     |    1 +
+ select.cpp                     |    2 +-
+ sendvideoinfo.cpp              |    3 +-
+ 45 files changed, 992 insertions(+), 412 deletions(-)
+ create mode 100644 cmake/FindGLEW.cmake
+
+
+hooks/post-receive
+-- 
+Project elc at BerliOS
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000212.html">[Elc-git] [Git]Project elc at BerliOS branch, feature/opengl2,	updated. 7edfd0bbde1e93c239270b9fc0108535b9576ea8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#211">[ date ]</a>
+              <a href="thread.html#211">[ thread ]</a>
+              <a href="subject.html#211">[ subject ]</a>
+              <a href="author.html#211">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/elc-git">More information about the Elc-git
+mailing list</a><br>
+</body></html>
